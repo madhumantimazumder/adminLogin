@@ -9,7 +9,6 @@ import javax.ws.rs.core.MediaType;
 
 import org.json.simple.JSONObject;
 
-import iiitb.ss.admin.service.impl.CourseServiceImpl;
 import iiitb.ss.admin.service.impl.LoginServiceImpl;
 
 
@@ -28,7 +27,7 @@ public class LoginController {
     public String addStudentPost(String json) {
         JSONObject jo = new JSONObject(); 
         LoginServiceImpl limpl=new LoginServiceImpl();
-        String username = limpl.processData(json);
+        String username = limpl.getAdmin(json);
         if(username==null) {
         	jo.put("status", 201);
         }

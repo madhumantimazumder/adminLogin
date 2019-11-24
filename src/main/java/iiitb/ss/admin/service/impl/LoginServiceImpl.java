@@ -10,7 +10,7 @@ import iiitb.ss.admin.service.LoginService;
 
 public class LoginServiceImpl implements LoginService{
 
-	public String processData(String data) {
+	public String getAdmin(String data) {
 		JSONObject jObj;
 		Employee admin=new Employee();
 		try {

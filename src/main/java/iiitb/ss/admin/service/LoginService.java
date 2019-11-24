@@ -1,5 +1,5 @@
 package iiitb.ss.admin.service;
 
 public interface LoginService {
-	public String processData(String data);
+	public String getAdmin(String data);
 }
