@@ -41,7 +41,7 @@ public class CourseServiceImpl implements CourseService {
 			course.setCapacity(Integer.parseInt((String) jObj.get("capacity")));
 			course.setCredit(Integer.parseInt((String) jObj.get("credit")));
 			course.setName((String) jObj.get("name"));
-			course.setCourseId(Integer.parseInt((String) jObj.get("course_code")));
+			course.setCourseId((String) jObj.get("course_code"));
 			
 			JSONArray ja = (JSONArray) jObj.get("schedule");
 			sc=processSchedule(sc,ja);
@@ -87,7 +87,7 @@ public class CourseServiceImpl implements CourseService {
 	    { 
 	    	Courses pre=new Courses();
 	    	JSONObject sObj =(JSONObject) itr2.next();
-	    	pre=crDAO.getCourseByCourseID(Integer.parseInt((String)sObj.get("courseId")));
+	    	pre=crDAO.getCourseByCourseID((String)sObj.get("courseId"));
 	    	prereqs.add(pre);
 	    }
 		return prereqs; 

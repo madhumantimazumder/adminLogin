@@ -32,7 +32,7 @@ public class CourseDAO {
 		  return courses;
 		
 	}
-	public Courses getCourseByCourseID(int id) {
+	public Courses getCourseByCourseID(String id) {
 		Session session = SessionUtil.getSession(); 
 		session.beginTransaction();
 		  

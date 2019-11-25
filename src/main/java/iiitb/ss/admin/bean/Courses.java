@@ -20,7 +20,7 @@ public class Courses {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY) 
 	private int id;
 	@Column(unique=true, nullable=false) 
-	private int courseId;
+	private String courseId;
 	@Column(nullable = false)
 	private String name;
 	@Column(nullable = false)
@@ -68,10 +68,10 @@ public class Courses {
 	public void setName(String name) {
 		this.name = name;
 	} 
-	public int getCourseId() {
+	public String getCourseId() {
 		return courseId;
 	}
-	public void setCourseId(int courseId) {
+	public void setCourseId(String courseId) {
 		this.courseId = courseId;
 	}
 	public int getCredit() {

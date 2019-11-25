@@ -19,7 +19,7 @@ function initializeModal(){
 	});
 }
 function checkError(){
-	$('#course-name').on('keyup blur', function(event) {
+	$('#course-name , #course-code').on('keyup blur', function(event) {
 		if($(this).val()==""){
 			$(this).parent().find('.error-field.text-error').show();
 			
@@ -28,7 +28,7 @@ function checkError(){
 			$(this).parent().find('.error-field.text-error').hide();
 		}
 	});
-	$('#course-capacity , #course-credit ,#course-code').on('keyup blur', function(event) {
+	$('#course-capacity , #course-credit').on('keyup blur', function(event) {
 		if( isNaN($(this).val()) || $(this).val()==""){
 			$(this).parent().find('.error-field.text-error').show();			
 		}
@@ -62,7 +62,7 @@ function isError(specialization_array,schedule_array){
 		$('#course-capacity').parent().find('.error-field.text-error').show();
 		flag=true;
 	}
-	if($('#course-code').val()=="" || isNaN($('#course-code').val())){
+	if($('#course-code').val()==""){
 		$('#course-code').parent().find('.error-field.text-error').show();
 		flag=true;
 	}

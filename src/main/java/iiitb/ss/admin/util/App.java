@@ -68,14 +68,14 @@ public class App
 		Specialization s1=new Specialization();
 		s1.setName("CS");
 		Courses course = new Courses();
-		course.setCourseId(10);
+		course.setCourseId("CS10");
 		course.setCapacity(1);
 		course.setCredit(1);
 		course.setName("course1");
 		
 		
 		Courses course1 = new Courses();
-		course1.setCourseId(11);
+		course1.setCourseId("CS11");
 		course1.setCapacity(1);
 		course1.setCredit(1);
 		course1.setName("course2");
@@ -83,7 +83,7 @@ public class App
 		course1.setSchedule(scs1);
 		
 		Courses course3 = new Courses();
-		course3.setCourseId(12);
+		course3.setCourseId("CS12");
 		course3.setCapacity(1);
 		course3.setCredit(1);
 		course3.setName("course3");
