@@ -29,16 +29,16 @@ public class Courses {
 	private int capacity;
 	
 	@Column(nullable = false)
-	@OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL,orphanRemoval=true)
+	@OneToMany(cascade = CascadeType.ALL,orphanRemoval=true)
 	@JoinColumn(name="courseId" , referencedColumnName="id")
 	private Set<Schedule> schedules=new HashSet<Schedule>();
 	
-	@ManyToMany(fetch = FetchType.EAGER)
+	@ManyToMany
 	@JoinTable(name = "PreReq", joinColumns = { @JoinColumn(name="courseId" , referencedColumnName="id") }, inverseJoinColumns = { @JoinColumn(name = "preReqId") })
 	private Set<Courses> pre_req=new HashSet<Courses>();
 	
 	@Column(nullable = false)
-	@ManyToMany(fetch = FetchType.EAGER)
+	@ManyToMany
 	@JoinTable(name = "CourseSpecialization", joinColumns = { @JoinColumn(name = "id") }, inverseJoinColumns = { @JoinColumn(name = "spId") })
 	private Set<Specialization> sp=new HashSet<Specialization>();
 	
@@ -93,9 +93,10 @@ public class Courses {
 		this.pre_req = pre_req;
 	}
 	
-	@Override 
-	public String toString() { return "Courses [courseId=" + courseId +
-	  ", name=" + name + ", credit=" + credit + ", capacity=" + capacity +
-	  ", pre_req=" + pre_req + "]"; }
+	/*
+	 * @Override public String toString() { return "Courses [courseId=" + courseId +
+	 * ", name=" + name + ", credit=" + credit + ", capacity=" + capacity +
+	 * ", pre_req=" + pre_req + "]"; }
+	 */
 	 
 }

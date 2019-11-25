@@ -22,6 +22,7 @@ public class CourseServiceImpl implements CourseService {
 	public List<Courses> getCourse() {
 		CourseDAO cDAO=new CourseDAO();
         List<Courses> c=cDAO.getCourse();
+        System.out.println(c);
         return c;
 	}
 	public List<Specialization> getSpecializaton(){
