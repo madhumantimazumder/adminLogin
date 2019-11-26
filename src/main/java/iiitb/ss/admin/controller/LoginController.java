@@ -31,6 +31,9 @@ public class LoginController {
         if(username==null) {
         	jo.put("status", 201);
         }
+        else if(username == "dept") {
+        	jo.put("status", 202);
+        }
         else {
         	jo.put("status", 200);
         }

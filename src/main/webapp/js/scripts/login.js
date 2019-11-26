@@ -24,10 +24,18 @@ function validateLogin(){
                 		window.localStorage.setItem('username', response.username);
                 		window.location.href = "/adminlogin/addCourse.html";
                 	}
-                	else
+                	else if(response.status=="201"){
                 		$('.login-error').show();
+                		$('.dept-error').hide();
 	                	$('#password').val("") ;
 	                	$('#username').val("");
+                	}
+                	else{
+                		$('.login-error').hide();
+                		$('.dept-error').show();
+	                	$('#password').val("") ;
+	                	$('#username').val("");
+                	}
                 },
                 error : function(response){
                     

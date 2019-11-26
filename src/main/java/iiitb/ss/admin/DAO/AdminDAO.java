@@ -24,10 +24,10 @@ public class AdminDAO {
 		}
 		int dept_id=admin.get(0).getDept().getDeptID();
 		session.close();
-		if(searchDept(dept_id).equals("Admin")) {
+		//if(searchDept(dept_id).equals("Admin")) {
 			return admin.get(0);
-		}
-		return null;
+		//}
+		//return null;
 	}
 	private String searchDept(int dept_id) {
 		DepartmentDAO deptdao=new DepartmentDAO();

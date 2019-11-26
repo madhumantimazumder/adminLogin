@@ -22,6 +22,9 @@ public class LoginServiceImpl implements LoginService{
 			if(admin==null) {
 				return null;
 			}
+			else if( !admin.getDept().getName().equals("Admin")) {
+				return "dept";
+			}
 			else if(admin.getPassword().equals(password) && admin.getUsername().equals(username)) {
 				return admin.getEmpName();
 			}
