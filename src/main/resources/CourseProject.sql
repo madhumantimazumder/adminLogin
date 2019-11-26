@@ -16,33 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Admin`
---
-
-DROP TABLE IF EXISTS `Admin`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Admin` (
-  `EmpID` int(11) NOT NULL AUTO_INCREMENT,
-  `DeptID` int(11) NOT NULL,
-  `EmpName` varchar(255) NOT NULL,
-  `Password` varchar(255) NOT NULL,
-  `Username` varchar(255) NOT NULL,
-  PRIMARY KEY (`EmpID`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Admin`
---
-
-LOCK TABLES `Admin` WRITE;
-/*!40000 ALTER TABLE `Admin` DISABLE KEYS */;
-INSERT INTO `Admin` VALUES (1,1,'Madhumanti','Madhumanti','101');
-/*!40000 ALTER TABLE `Admin` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `CourseSpecialization`
 --
 
@@ -77,7 +50,7 @@ DROP TABLE IF EXISTS `Courses`;
 CREATE TABLE `Courses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `capacity` int(11) NOT NULL,
-  `courseId` int(11) NOT NULL,
+  `courseId` varchar(255) NOT NULL,
   `credit` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
@@ -91,7 +64,7 @@ CREATE TABLE `Courses` (
 
 LOCK TABLES `Courses` WRITE;
 /*!40000 ALTER TABLE `Courses` DISABLE KEYS */;
-INSERT INTO `Courses` VALUES (1,1,11,1,'course2'),(2,1,12,1,'course3'),(3,1,10,1,'course1');
+INSERT INTO `Courses` VALUES (1,1,'CS11',1,'course2'),(2,1,'CS12',1,'course3'),(3,1,'CS10',1,'course1');
 /*!40000 ALTER TABLE `Courses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,7 +168,7 @@ CREATE TABLE `Schedule` (
 
 LOCK TABLES `Schedule` WRITE;
 /*!40000 ALTER TABLE `Schedule` DISABLE KEYS */;
-INSERT INTO `Schedule` VALUES (1,'Monday','11:30',1),(2,'Monday','9:30',1),(3,'Monday','9:30',3),(4,'Monday','11:30',3);
+INSERT INTO `Schedule` VALUES (1,'Monday','11:30',1),(2,'Monday','9:30',1),(3,'Monday','11:30',3),(4,'Monday','9:30',3);
 /*!40000 ALTER TABLE `Schedule` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -222,28 +195,6 @@ LOCK TABLES `Specialization` WRITE;
 INSERT INTO `Specialization` VALUES (1,'DS'),(2,'CS');
 /*!40000 ALTER TABLE `Specialization` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `hibernate_sequence`
---
-
-DROP TABLE IF EXISTS `hibernate_sequence`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `hibernate_sequence` (
-  `next_val` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `hibernate_sequence`
---
-
-LOCK TABLES `hibernate_sequence` WRITE;
-/*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
-INSERT INTO `hibernate_sequence` VALUES (4);
-/*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -254,4 +205,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-23 20:52:30
+-- Dump completed on 2019-11-26 17:08:36
