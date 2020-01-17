@@ -1,5 +1,5 @@
 # adminLogin and Course Creation
-1.	Use App.java to create dependent tables and fields in Database to run the code succesfully. <br/>
+1.	Use App.java to create dependent tables and fields in Database to run the code succesfully.<br/>
 	or in Resources folder Database(CourseProject) is provided.Please import it to run the project successfully</br>
 2.	Admin - Username AD101 Password Madhumanti //should login <br/>
 	Teacher - Username TC101 Password ujan //should not login <br/>
